@@ -22,7 +22,7 @@ fi
 ##########################
 # NMT-Keras installation #
 ##########################
-git clone --branch practica_TA https://github.com/midobal/nmt-keras.git "$PTH"/nmt-keras
+git clone https://github.com/PRHLT/nmt-keras_practicas-TA.git "$PTH"/nmt-keras
 
 ##########################
 # miniconda installation #

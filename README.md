@@ -20,8 +20,8 @@ este directorio se encuentra ubicado en el home. De forma similar, asumimos que
 se desea instalar *NMT-Keras* en el directorio “TA”. De no ser ası́, bastará con modificar ```$INSTALLATION PATH```.
 
   ```console
-~/TA$ wget https://raw.githubusercontent.com/midobal/nmt-keras/\
-practica_TA/full_installation.sh
+~/TA$ wget https://raw.githubusercontent.com/PRHLT/nmt-keras_practicas-TA\
+/master/full_installation.sh
 ~/TA$ chmod +x full_installation.sh
 ~/TA$ export INSTALLATION_PATH=~/TA
 ~/TA$ ./full_installation.sh "$INSTALLATION_PATH"
