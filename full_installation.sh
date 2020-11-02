@@ -27,7 +27,7 @@ git clone https://github.com/PRHLT/nmt-keras_practicas-TA.git "$PTH"/nmt-keras
 ##########################
 # miniconda installation #
 ##########################
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+wget https://repo.continuum.io/miniconda/Miniconda3-py37_4.8.3-Linux-x86_64.sh -O miniconda.sh;
 bash miniconda.sh -b -p "$PTH"/miniconda
 export PATH="$PTH/miniconda/bin:$PATH"
 hash -r
