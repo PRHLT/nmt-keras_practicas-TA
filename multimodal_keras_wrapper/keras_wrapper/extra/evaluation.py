@@ -50,10 +50,7 @@ def get_coco_score(pred_list, verbose, extra_vars, split):
         refs = {idx: list(map(extra_vars['detokenize_f'], refs[idx])) for idx in refs}
 
     scorers = [
-        (Bleu(4), ["Bleu_1", "Bleu_2", "Bleu_3", "Bleu_4"]),
-        (Ter(), "TER"),
-        (Rouge(), "ROUGE_L"),
-        (Cider(), "CIDEr")
+        (Bleu(4), ["Bleu_1", "Bleu_2", "Bleu_3", "Bleu_4"])
     ]
 
     final_scores = {}
