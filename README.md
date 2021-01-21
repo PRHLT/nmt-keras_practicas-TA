@@ -110,6 +110,17 @@ copia local que acabamos de crear. Una vez definidos los parámetros deseados, s
 ~/TA/Practica2$ python "$NMT"/nmt-keras/main.py -c config.py 2>traza &
 ```
 
+De manera similar, la traducción pasará a realizarse del siguiente modo:
+
+```console
+~/TA/Practica2$ python "$NMT"/nmt-keras/sample_ensemble.py \
+--models trained_model/epoch_5 \
+--dataset datasets/Dataset_EuTrans_esen.pkl \
+--text Data/EuTrans/test.es \
+--dest hyp.test.en \
+--config config.py
+```
+
 ## Bibliografía
 
 Álvaro Peris and Francisco Casacuberta. [NMT-Keras: a Very Flexible Toolkit with

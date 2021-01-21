@@ -6,6 +6,7 @@ import ast
 from keras_wrapper.extra.read_write import pkl2dict
 from nmt_keras import check_params
 from nmt_keras.apply_model import sample_ensemble
+from importlib.machinery import SourceFileLoader
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
 logger = logging.getLogger(__name__)
@@ -21,7 +22,7 @@ def parse_args():
     parser.add_argument("-d", "--dest", required=False, help="File to save translations in. If not specified, "
                                                              "translations are outputted in STDOUT.")
     parser.add_argument("-v", "--verbose", required=False, default=0, type=int, help="Verbosity level")
-    parser.add_argument("-c", "--config", required=False, help="Config pkl for loading the model configuration. "
+    parser.add_argument("-c", "--config", required=False, help="Config for loading the model configuration. "
                                                                "If not specified, hyperparameters "
                                                                "are read from config.py")
     parser.add_argument("-n", "--n-best", action="store_true", default=False, help="Write n-best list (n = beam size)")
@@ -43,7 +44,8 @@ if __name__ == "__main__":
         params = load_parameters()
     else:
         logger.info("Loading parameters from %s" % str(args.config))
-        params = pkl2dict(args.config)
+        config = SourceFileLoader("load_parameters", args.config).load_module()
+        parameters = config.load_parameters()
     try:
         for arg in args.changes:
             try:
