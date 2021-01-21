@@ -45,7 +45,7 @@ if __name__ == "__main__":
     else:
         logger.info("Loading parameters from %s" % str(args.config))
         config = SourceFileLoader("load_parameters", args.config).load_module()
-        parameters = config.load_parameters()
+        params = config.load_parameters()
     try:
         for arg in args.changes:
             try:
