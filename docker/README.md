@@ -18,7 +18,7 @@ docker build -t nmt-keras-ta .
 Asumiendo que los datos de entrenamiento se encuentran en `~TA/Practica2` (para más información acerca de los datos, consultar el boletín), el entrenamiento se inicia mediante:
 
 ```
-docker container run -it --rm -v /home/$user/TA/Practica2:/data nmt-keras
+docker container run -it --rm -v /home/$user/TA/Practica2:/data nmt-keras-ta
 ```
 siendo `$user` tu nombre de usuario.
 
@@ -28,7 +28,7 @@ Este proceso dura unos minutos.
 Una vez entrenada la red, será necesario ejecutar bash dentro del contenedor de docker como paso previo a realizar la traducción:
 
 ```
-docker container run -it --rm -v /home/$user/TA/Practica2:/data nmt-keras /bin/bash
+docker container run -it --rm -v /home/$user/TA/Practica2:/data nmt-keras-ta /bin/bash
 ```
 
 Tras esto, la traducción se realiza de la siguiente forma:
@@ -38,7 +38,7 @@ ln -s /data/trained_models/EuTrans_esen_AttentionRNNEncoderDecoder_\
 src_emb_64_bidir_True_enc_LSTM_64_dec_ConditionalLSTM_64_deepout_\
 linear_trg_emb_64_Adam_0.001 trained_model
 python sample_ensemble.py \
---models /data/trained_model/epoch_5 \
+--models trained_model/epoch_5 \
 --dataset /data/datasets/Dataset_EuTrans_esen.pkl \
 --text /data/Data/EuTrans/test.es \
 --dest /data/hyp.test.en
@@ -48,7 +48,7 @@ python sample_ensemble.py \
 Para evaluar la traducción, habrá que volver a ejecutar bash dentro del contenedor de docker:
 
 ```
-docker container run -it --rm -v /home/$user/TA/Practica2:/data nmt-keras /bin/bash
+docker container run -it --rm -v /home/$user/TA/Practica2:/data nmt-keras-ta /bin/bash
 ```
 
 A continuación, la traducción se puede evaluar mediante:
@@ -72,7 +72,7 @@ copia local que acabamos de crear. Una vez definidos los parámetros deseados, s
 docker container run -it --rm \
 -v /home/$user/TA/Practica2:/data \
 -v $ruta/config.py:/opt/nmt-keras/config.py \
-nmt-keras
+nmt-keras-ta
 ```
 donde `$ruta` es la ruta en la que se encuentra la copia local de `config.py`.
 
@@ -82,5 +82,5 @@ De manera similar, la ejecución de bash (para los procesos de traducción y eva
 docker container run -it --rm \
 -v /home/$user/TA/Practica2:/data \
 -v $ruta/config.py:/opt/nmt-keras/config.py \
-nmt-keras /bin/bash
+nmt-keras-ta /bin/bash
 ```
