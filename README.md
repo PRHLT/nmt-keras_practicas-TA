@@ -31,6 +31,9 @@ Una vez finalizada la instalación, se deberá asegurar que *Tensorflow* está c
 "backend": "tensorflow"
 ```
 
+### Docker
+Alternativamente, en el directorio [docker](docker) hay instrucciones para usar el toolkit mediante Docker.
+
 ## Definición de variables
 Para el correcto uso de *NMT-Keras*, es necesario configurar las siguientes variables:
 
