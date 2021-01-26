@@ -16,7 +16,7 @@ WORKDIR /opt/nmt-keras
 RUN wget https://repo.continuum.io/miniconda/Miniconda3-py37_4.8.3-Linux-x86_64.sh -O /tmp/miniconda.sh && \
 bash /tmp/miniconda.sh -b -p /opt/miniconda && export PATH="/opt/miniconda/bin:$PATH" && \
 conda config --set always_yes yes --set changeps1 no && conda init && \
-conda install --file /opt/nmt-keras/req-travis-conda.txt && conda install mkl mkl-service pip && \
+conda install --file /opt/nmt-keras/req-travis-conda.txt && conda install mkl mkl-service pip tensorflow-gpu=1.14 && \
 pip install -r /opt/nmt-keras/req-travis-pip.txt && pip install tensorflow==1.14.0
 ENV PYTHONPATH="PYTHONPATH=${PYTHONPATH}:/opt/nmt-keras/keras:\
 /opt/nmt-keras/coco-caption:/opt/nmt-keras/multimodal_keras_wrapper"
