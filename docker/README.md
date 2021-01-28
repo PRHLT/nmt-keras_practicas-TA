@@ -1,18 +1,20 @@
 # Ejecución mediante Docker
 
 ## Tabla de Contenidos
-* [Construir la imagen](#construir-la-imagen)
-* [Entrenamiento](#entrenamiento)
-* [Traducción](#traducción)
-* [Evaluación](#evaluación)
-* [Ajuste de parámetros](#ajuste-de-parámetros)
+* [Construir la imagen](#construir-la-imagen).
+* [Entrenamiento](#entrenamiento).
+* [Traducción](#traducción).
+* [Evaluación](#evaluación).
+* [Ajuste de parámetros](#ajuste-de-parámetros).
 
 ## Construir la imagen
-El primer paso a realizar es construir la imagen. Para ello, es necesario ejecutar la siguiente orden (bajo el supuesto de que se está en el directorio donde se encuentra este repo. Si no, habrá que reemplazar `.` con la ruta correcta):
+El primer paso a realizar es construir la imagen. Para ello, es necesario ejecutar la siguiente orden (bajo el supuesto de que se está en el directorio donde se encuentra este repo). Si no, habrá que reemplazar `.` con la ruta correcta):
 
 ```
 docker build -t nmt-keras-ta .
 ```
+
+Nota: esta imagen utiliza Cuda 10. En caso de necesitar usar Cuda 11, construir la imagen a partir del Dockerfile contenido en [este directorio](cuda11).
 
 ## Entrenamiento
 Asumiendo que los datos de entrenamiento se encuentran en `~TA/Practica2` (para más información acerca de los datos, consultar el boletín), el entrenamiento se inicia mediante:

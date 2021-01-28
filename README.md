@@ -2,14 +2,14 @@
 Esta es una versión modificada para la realización de las prácticas de la asignatura de traducción automática del máster [IARFID](http://www.upv.es/titulaciones/MUIARFID/). Para más información acerca de *NMT-Keras*, consultar el [repositorio oficial](https://github.com/lvapeab/nmt-keras).
 
 ## Tabla de Contenidos
-* [Instalación](#instalación)
-* [Definición de variables](#definición-de-variables)
-* [Descripción de la red](#descripción-de-la-red)
-* [Entrenamiento](#entrenamiento)
-* [Traducción](#traducción)
-* [Evaluación](#evaluación)
-* [Ajuste de parámetros](#ajuste-de-parámetros)
-* [Bibliografía](#bibliografía)
+* [Instalación](#instalación).
+* [Definición de variables](#definición-de-variables).
+* [Descripción de la red](#descripción-de-la-red).
+* [Entrenamiento](#entrenamiento).
+* [Traducción](#traducción).
+* [Evaluación](#evaluación).
+* [Ajuste de parámetros](#ajuste-de-parámetros).
+* [Bibliografía](#bibliografía).
 
 
 ## Instalación
