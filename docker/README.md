@@ -2,6 +2,7 @@
 
 ## Tabla de Contenidos
 * [Construir la imagen](#construir-la-imagen).
+* [Datos](#datos).
 * [Entrenamiento](#entrenamiento).
 * [Traducción](#traducción).
 * [Evaluación](#evaluación).
@@ -16,8 +17,19 @@ docker build -t nmt-keras-ta .
 
 Nota: esta imagen utiliza Cuda 10. En caso de necesitar usar Cuda 11, construir la imagen a partir del Dockerfile contenido en [este directorio](cuda11).
 
+
+## Datos
+Los datos a usar se encuentran ubicados en el directorio `dataset/EuTrans`. Vienen ya preparados y no requiren de ningún preproceso. Sin embargo, por compatibilidad con la versión del laboratorio, deberemos crear un directorio `data` en el directorio donde estamos trabajando y copiar los datos ahí:
+
+```
+mkdir ~/TA/Practica2/data
+cp -r dataset/EuTrans ~/TA/Practica2/data
+```
+
+Nota: alternativamente, se puede editar la variable `DATA_ROOT_PATH` del fichero `config.py` para indicar la ubicación de los datos.
+
 ## Entrenamiento
-Asumiendo que los datos de entrenamiento se encuentran en `~TA/Practica2` (para más información acerca de los datos, consultar el boletín), el entrenamiento se inicia mediante:
+Una vez copiado los datos al directorio de trabajo, el entrenamiento se inicia mediante:
 
 ```
 docker container run -it --rm -v /home/$user/TA/Practica2:/data nmt-keras-ta
