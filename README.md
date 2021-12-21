@@ -1,5 +1,5 @@
 # NMT-Keras: Prácticas Traducción Automática
-Esta es una versión modificada para la realización de las prácticas de la asignatura de traducción automática del máster [IARFID](http://www.upv.es/titulaciones/MUIARFID/). Para más información acerca de *NMT-Keras*, consultar el [repositorio oficial](https://github.com/lvapeab/nmt-keras).
+Esta es una versión modificada para la realización de las prácticas de la asignatura de traducción automática del máster [IARFID](http://www.upv.es/titulaciones/MUIARFID/). Para más información acerca de *NMT-Keras*, consultar el [repositorio oficial](https://github.com/lvapeab/nmt-keras). For an English version click [here](English.md).
 
 ## Tabla de Contenidos
 * [Instalación](#instalación).
