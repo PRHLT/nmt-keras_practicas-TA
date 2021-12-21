@@ -9,7 +9,7 @@
 * [Ajuste de parámetros](#ajuste-de-parámetros).
 
 ## Construir la imagen
-El primer paso a realizar es construir la imagen. Para ello, es necesario ejecutar la siguiente orden (bajo el supuesto de que se está en el directorio donde se encuentra este repo). Si no, habrá que reemplazar `.` con la ruta correcta):
+El primer paso a realizar es construir la imagen. Para ello, es necesario ejecutar la siguiente orden (bajo el supuesto de que se está en el directorio donde se encuentra este repo. Si no, habrá que reemplazar `.` con la ruta correcta):
 
 ```
 docker build -t nmt-keras-ta .
