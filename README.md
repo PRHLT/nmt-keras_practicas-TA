@@ -5,6 +5,7 @@ Esta es una versión modificada para la realización de las prácticas de la asi
 * [Instalación](#instalación).
 * [Definición de variables](#definición-de-variables).
 * [Descripción de la red](#descripción-de-la-red).
+* [Datos](#datos).
 * [Entrenamiento](#entrenamiento).
 * [Traducción](#traducción).
 * [Evaluación](#evaluación).
@@ -56,8 +57,18 @@ En el fichero ```${NMT}/nmt-keras/config.py``` está detallada la red que se va 
 * El número de epochs es 5.
 * Otros parámetros de la red se encuentran en ```config.py```.
 
+## Datos
+Los datos a usar se encuentran ubicados en el directorio `dataset/EuTrans`. Vienen ya preparados y no requiren de ningún preproceso. Sin embargo, por compatibilidad con la versión del laboratorio, deberemos crear un directorio `data` en el directorio donde estamos trabajando y copiar los datos ahí:
+
+```
+mkdir ~/TA/Practica2/data
+cp -r dataset/EuTrans ~/TA/Practica2/data
+```
+
+Nota: alternativamente, se puede editar la variable `DATA_ROOT_PATH` del fichero `config.py` para indicar la ubicación de los datos.
+
 ## Entrenamiento
-Asumiendo que los datos de entrenamiento se encuentran en el directorio "Practica2" (para más información acerca de los datos, consultar el boletín), el entrenamiento se inicia mediante:
+Una vez copiado los datos al directorio de trabajo, el entrenamiento se inicia mediante:
 
 ```console
 ~/TA/Practica2$ python ${NMT}/nmt-keras/main.py 2>traza &
