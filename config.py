@@ -42,7 +42,7 @@ def load_parameters():
     EVAL_ON_SETS_KERAS = []                       # Possible values: 'train', 'val' and 'test' (Keras' evaluator). Untested..
     START_EVAL_ON_EPOCH = 1                       # First epoch to start the model evaluation.
     EVAL_EACH_EPOCHS = True                       # Select whether evaluate between N epochs or N updates.
-    EVAL_EACH = 1                                 # Sets the evaluation frequency (epochs or updates).
+    EVAL_EACH = 9001                              # Sets the evaluation frequency (epochs or updates).
 
     # Search parameters
     SAMPLING = 'max_likelihood'                   # Possible values: multinomial or max_likelihood (recommended).
